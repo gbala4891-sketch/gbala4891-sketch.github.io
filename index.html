@@ -1,186 +1,69 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Portfolio | Cloud & Python</title>
-  <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-
-    body {
-      font-family: Arial, sans-serif;
-      background: #0b1120;
-      color: #e5e7eb;
-      line-height: 1.7;
-    }
-
-    header {
-      padding: 22px 8%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 12px;
-      border-bottom: 1px solid #273449;
-    }
-
-    .logo { color: #67e8f9; font-weight: bold; font-size: 22px; }
-
-    nav a {
-      color: #e5e7eb;
-      text-decoration: none;
-      margin-left: 18px;
-      font-size: 14px;
-    }
-
-    nav a:hover, a:hover { color: #67e8f9; }
-
-    .hero {
-      padding: 95px 8% 80px;
-      background: radial-gradient(ellipse at top right, #163458, #0b1120 65%);
-    }
-
-    .tagline { color: #67e8f9; letter-spacing: 2px; font-size: 13px; }
-
-    h1 {
-      font-size: clamp(36px, 6vw, 65px);
-      line-height: 1.15;
-      margin: 18px 0;
-    }
-
-    h1 span { color: #67e8f9; }
-
-    .hero p { max-width: 620px; color: #b9c5d6; }
-
-    .btn {
-      display: inline-block;
-      margin: 24px 12px 0 0;
-      padding: 11px 20px;
-      border-radius: 7px;
-      background: #67e8f9;
-      color: #0b1120;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    .btn.secondary { background: transparent; color: #67e8f9; border: 1px solid #67e8f9; }
-
-    section { padding: 65px 8%; }
-
-    .section-title { font-size: 30px; margin-bottom: 24px; }
-    .section-title span { color: #67e8f9; }
-
-    .muted { color: #b9c5d6; max-width: 750px; }
-
-    .skills, .projects {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
-      gap: 18px;
-    }
-
-    .card {
-      padding: 22px;
-      border-radius: 12px;
-      background: #121d30;
-      border: 1px solid #273449;
-    }
-
-    .card h3 { margin-bottom: 8px; color: #67e8f9; }
-    .card p { color: #b9c5d6; font-size: 14px; }
-    .card a { color: #67e8f9; display: inline-block; margin-top: 12px; }
-
-    #contact { background: #101a2b; }
-    #contact a { color: #67e8f9; }
-
-    footer {
-      text-align: center;
-      padding: 25px;
-      color: #94a3b8;
-      border-top: 1px solid #273449;
-      font-size: 13px;
-    }
-
-    @media (max-width: 600px) {
-      header { padding: 20px 5%; }
-      nav a { margin: 0 10px 0 0; }
-      .hero, section { padding-left: 6%; padding-right: 6%; }
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Bala Ganesh D — IT student exploring software development, data science and cloud computing.">
+<meta name="theme-color" content="#0b1020">
+<title>Bala Ganesh D | IT Portfolio</title>
+<style>
+:root{--bg:#080d19;--panel:#111b30;--text:#eef3ff;--muted:#a8b4cc;--mint:#7ce7d4;--blue:#8ab4ff;--line:rgba(178,198,231,.15);--max:1120px}
+*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth;scroll-padding-top:85px}
+body{font-family:Inter,system-ui,-apple-system,"Segoe UI",sans-serif;background:radial-gradient(ellipse at 85% 5%,rgba(67,105,184,.2),transparent 32rem),radial-gradient(ellipse at 8% 40%,rgba(49,164,151,.1),transparent 28rem),var(--bg);color:var(--text);line-height:1.7}
+a{color:inherit;text-decoration:none}a:focus-visible{outline:3px solid var(--mint);outline-offset:4px}.container{width:min(var(--max),88%);margin:auto}
+header{position:sticky;top:0;z-index:5;background:rgba(8,13,25,.88);backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}
+nav{min-height:74px;display:flex;align-items:center;justify-content:space-between;gap:20px}.brand{font-weight:900;font-size:1.2rem;letter-spacing:-.05em}.brand span,.eyebrow,h2{color:var(--mint)}
+.navlinks{display:flex;gap:22px;flex-wrap:wrap;list-style:none}.navlinks a{font-size:.9rem;color:var(--muted)}.navlinks a:hover{color:var(--mint)}
+.hero{padding:100px 0 85px;display:grid;grid-template-columns:1.4fr .8fr;align-items:center;gap:55px;min-height:580px}
+.eyebrow{text-transform:uppercase;letter-spacing:.16em;font-size:.78rem;font-weight:800}.eyebrow:before{content:"";display:inline-block;width:24px;height:1px;background:currentColor;vertical-align:middle;margin-right:10px}
+h1{font-size:clamp(2.8rem,6vw,5.2rem);line-height:1.03;letter-spacing:-.065em;margin:20px 0}.mint{color:var(--mint)}.subtitle{font-size:1.25rem;color:#d1dcf2;margin-bottom:16px}.copy,.intro{color:var(--muted);max-width:680px}
+.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}.btn{display:inline-block;padding:11px 17px;border-radius:9px;font-weight:800;font-size:.92rem;border:1px solid var(--line);transition:transform .2s}.btn:hover{transform:translateY(-2px)}.primary{background:var(--mint);color:#07131b;border-color:var(--mint)}.secondary{background:#ffffff08}
+.profile{padding:28px;border:1px solid #7ce7d43b;border-radius:22px;background:linear-gradient(145deg,#182841f2,#0d1424f2);box-shadow:0 25px 80px #0004}.monogram{width:72px;height:72px;display:grid;place-items:center;border-radius:20px;background:linear-gradient(135deg,var(--mint),var(--blue));color:#07131b;font-weight:900;font-size:1.35rem;margin-bottom:22px}.profile h2{font-size:1.25rem;margin-bottom:8px}.profile p{color:var(--muted);font-size:.93rem;margin-bottom:18px}.stat{padding:12px 0;border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:12px;font-size:.88rem}.stat span:first-child{color:var(--muted)}.stat span:last-child{text-align:right;font-weight:700}
+section{padding:72px 0}.heading{max-width:720px;margin-bottom:28px}.heading .eyebrow{margin-bottom:10px}h2.title{font-size:clamp(2rem,4vw,3rem);line-height:1.15;letter-spacing:-.045em;margin-bottom:12px}.panel,.skill,.project{background:rgba(17,27,48,.82);border:1px solid var(--line);border-radius:16px;padding:24px}.panel p{color:var(--muted);margin-bottom:13px}.panel p:last-child{margin-bottom:0}
+.about{display:grid;grid-template-columns:1.2fr .8fr;gap:18px}.facts{display:grid;gap:12px}.fact{padding:15px;background:#ffffff05;border:1px solid var(--line);border-radius:11px}.fact strong{display:block;color:var(--mint);font-size:.75rem;text-transform:uppercase;letter-spacing:.1em}.fact span{font-size:.94rem}
+.skills{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}.skill h3{margin-bottom:8px}.skill p,.project p{color:var(--muted);font-size:.92rem}.symbol{color:var(--mint);font-weight:900;font-size:1.1rem;margin-bottom:9px}.tags{display:flex;gap:7px;flex-wrap:wrap;margin-top:13px}.tag{border:1px solid #8ab4ff30;background:#8ab4ff0c;color:#d9e5fb;padding:4px 9px;border-radius:100px;font-size:.76rem}
+.projects{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}.project{display:flex;flex-direction:column}.project-head{display:flex;justify-content:space-between;gap:10px;margin-bottom:14px}.num{color:var(--mint);font-size:.8rem;font-weight:800;letter-spacing:.1em}.type{font-size:.73rem;color:var(--muted);border:1px solid var(--line);border-radius:99px;padding:3px 8px}.project h3{font-size:1.1rem;line-height:1.4;margin-bottom:9px}.project .tags{margin-top:auto;margin-bottom:15px}.project-link{color:var(--mint);font-weight:800;font-size:.9rem}.note{border-left:3px solid var(--mint);padding:12px 15px;background:#7ce7d409;color:var(--muted);border-radius:0 9px 9px 0;margin-top:18px;font-size:.88rem}
+.timeline{display:grid;gap:19px}.timeline-item{display:grid;grid-template-columns:13px 1fr;gap:14px}.dot{width:9px;height:9px;background:var(--mint);border-radius:50%;margin-top:10px;box-shadow:0 0 0 5px #7ce7d41a}.timeline h3{font-size:1.03rem}.meta{color:var(--mint);font-size:.84rem;margin:2px 0 6px}.timeline p:last-child{color:var(--muted);font-size:.92rem}
+.education{display:grid;grid-template-columns:1fr 1fr;gap:16px}.education p{color:var(--muted)}.certs{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;list-style:none;margin-top:16px}.certs li{padding:12px 14px;background:var(--panel);border:1px solid var(--line);border-radius:10px;font-size:.9rem}.certs li:before{content:"↗";color:var(--mint);margin-right:8px;font-weight:900}
+.strengths{display:flex;flex-wrap:wrap;gap:9px}.strengths span{border:1px solid #7ce7d43b;background:#7ce7d40b;color:#d8fff7;padding:8px 12px;border-radius:9px;font-size:.9rem}
+.contact{display:grid;grid-template-columns:1fr 1fr;gap:22px}.contactlinks{display:grid;gap:10px}.contactlink{padding:13px 15px;display:flex;justify-content:space-between;gap:12px;background:var(--panel);border:1px solid var(--line);border-radius:10px;overflow-wrap:anywhere}.contactlink span:first-child{color:var(--muted)}.contactlink span:last-child{color:var(--mint);text-align:right}
+footer{border-top:1px solid var(--line);padding:23px 0;color:var(--muted);font-size:.84rem}.foot{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+@media(max-width:850px){.hero{grid-template-columns:1fr;gap:30px;padding-top:70px;min-height:0}.profile{max-width:560px}.about,.contact{grid-template-columns:1fr}.skills{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:600px){.container{width:92%}nav{padding:13px 0;align-items:flex-start;flex-direction:column}.navlinks{gap:12px}.navlinks a{font-size:.82rem}.hero{padding:58px 0}section{padding:55px 0}.skills,.projects,.education,.certs{grid-template-columns:1fr}.panel,.skill,.project{padding:20px}.contactlink{flex-direction:column;gap:2px}.contactlink span:last-child{text-align:left}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+</style>
 </head>
 <body>
-
-  <header>
-    <div class="logo">MyPortfolio.</div>
-    <nav>
-      <a href="#about">About</a>
-      <a href="#skills">Skills</a>
-      <a href="#projects">Projects</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
-
-  <main>
-    <div class="hero">
-      <p class="tagline">STUDENT DEVELOPER · CLOUD COMPUTING</p>
-      <h1>Hello, I'm a<br><span>Future Cloud Professional.</span></h1>
-      <p>
-        I'm a student learning AWS and Python, building practical
-        projects, and developing my skills in technology.
-      </p>
-      <a class="btn" href="#projects">Explore My Projects ↘</a>
-      <a class="btn secondary" href="#contact">Contact Me</a>
-    </div>
-
-    <section id="about">
-      <h2 class="section-title">About <span>Me</span></h2>
-      <p class="muted">
-        I am a student interested in Cloud Computing and Software
-        Development. I am currently learning AWS and Python.
-        My goal is to gain practical experience, keep learning,
-        and build useful technology projects.
-      </p>
-    </section>
-
-    <section id="skills">
-      <h2 class="section-title">Technical <span>Skills</span></h2>
-      <div class="skills">
-        <div class="card"><h3>Python</h3><p>Learning programming and building beginner projects.</p></div>
-        <div class="card"><h3>AWS</h3><p>Currently learning cloud computing fundamentals.</p></div>
-        <div class="card"><h3>HTML & CSS</h3><p>Creating and styling simple websites.</p></div>
-        <div class="card"><h3>GitHub</h3><p>Uploading projects and learning version control.</p></div>
-      </div>
-    </section>
-
-    <section id="projects">
-      <h2 class="section-title">Featured <span>Projects</span></h2>
-      <div class="projects">
-        <div class="card">
-          <h3>Student Registration System</h3>
-          <p>A graphical student registration form built using Python and Tkinter.</p>
-          <a href="https://github.com/gbala4891-sketch/python-student-registration" target="_blank" rel="noopener noreferrer">View on GitHub ↗</a>
-        </div>
-        <div class="card">
-          <h3>Portfolio Website</h3>
-          <p>A personal website created with HTML and CSS to showcase my learning journey.</p>
-          <a href="https://github.com/gbala4891-sketch/gbala4891-sketch.github.io" target="_blank" rel="noopener noreferrer">View Source Code ↗</a>
-        </div>
-      </div>
-    </section>
-
-    <section id="contact">
-      <h2 class="section-title">Let's <span>Connect</span></h2>
-      <p class="muted">Feel free to explore my projects and connect with me professionally.</p>
-      <p style="margin-top: 18px;">
-        GitHub: <a href="https://github.com/gbala4891-sketch">Visit my GitHub</a>
-      </p>
-      <p>
-        LinkedIn: <a href="https://www.linkedin.com/in/balaganesh-d-71271a2a5/">Visit my LinkedIn</a>
-      </p>
-    </section>
-  </main>
-
-  <footer>Built with HTML & CSS · Always learning, always growing.</footer>
-
+<header><nav class="container" aria-label="Main navigation"><a class="brand" href="#home">BG<span>.</span></a><ul class="navlinks"><li><a href="#about">About</a></li><li><a href="#skills">Skills</a></li><li><a href="#projects">Projects</a></li><li><a href="#experience">Experience</a></li><li><a href="#education">Education</a></li><li><a href="#contact">Contact</a></li></ul></nav></header>
+<main>
+<section class="container hero" id="home">
+<div><p class="eyebrow">Portfolio · 2026</p><h1>Hi, I'm<br><span class="mint">Bala Ganesh D.</span></h1><p class="subtitle">IT Student · Aspiring Software Developer</p><p class="copy">I explore the intersection of software development, data science, and cloud computing. I enjoy turning what I learn into practical projects and building my skills through hands-on experience, collaboration, and continuous learning.</p><div class="actions"><a class="btn primary" href="#projects">Explore my work ↘</a><a class="btn secondary" href="#contact">Get in touch ↗</a></div></div>
+<aside class="profile"><div class="monogram">BG</div><h2>Curious by nature. Practical by approach.</h2><p>Focused on learning, building, and growing into a dependable technology professional.</p><div class="stat"><span>Education</span><span>B.Tech · IT</span></div><div class="stat"><span>Graduation</span><span>Expected 2027</span></div><div class="stat"><span>Interests</span><span>Python · Data · Cloud</span></div><div class="stat"><span>Based in</span><span>Chennai, India</span></div></aside>
+</section>
+<section id="about"><div class="container"><div class="heading"><p class="eyebrow">A little about me</p><h2 class="title">Learning with purpose.<br>Building with curiosity.</h2></div><div class="about"><article class="panel"><p>Hi, I'm Bala Ganesh D, a B.Tech Information Technology student at S.A. Engineering College, Chennai, expected to graduate in 2027.</p><p>I'm interested in software development, data science, and cloud computing. Through projects, training, and hands-on learning, I'm working to strengthen my technical knowledge and understand how technology can solve practical problems.</p><p>I value communication, teamwork, accountability, and taking initiative. I enjoy coordinating with others, learning from feedback, and following a task through with care.</p><p>My goal is to contribute to useful technology projects while continuing to grow as a developer and collaborative team member.</p></article><div class="facts"><div class="fact"><strong>Currently pursuing</strong><span>B.Tech in Information Technology</span></div><div class="fact"><strong>Areas of interest</strong><span>Software · Data Science · Cloud</span></div><div class="fact"><strong>Professional approach</strong><span>Ownership, teamwork, continuous learning</span></div><div class="fact"><strong>Languages</strong><span>Tamil · English · Japanese (JLPT N5)</span></div></div></div></div></section>
+<section id="skills"><div class="container"><div class="heading"><p class="eyebrow">What I'm working with</p><h2 class="title">Skills & tools</h2><p class="intro">A snapshot of the tools, technical areas, and professional skills I've been developing.</p></div><div class="skills">
+<article class="skill"><div class="symbol">Py</div><h3>Programming & Web</h3><p>Building programming foundations and simple application interfaces.</p><div class="tags"><span class="tag">Python</span><span class="tag">HTML</span><span class="tag">CSS</span></div></article>
+<article class="skill"><div class="symbol">DS</div><h3>Data Science</h3><p>Working with data preparation and exploratory analysis concepts.</p><div class="tags"><span class="tag">EDA</span><span class="tag">Data cleaning</span><span class="tag">Preprocessing</span></div></article>
+<article class="skill"><div class="symbol">DB</div><h3>Database</h3><p>Foundational database knowledge for working with application data.</p><div class="tags"><span class="tag">MySQL</span></div></article>
+<article class="skill"><div class="symbol">UI</div><h3>UI/UX Design</h3><p>Exploring visual layout, interface structure, and responsive design.</p><div class="tags"><span class="tag">Figma</span><span class="tag">UI design</span><span class="tag">Responsive design</span></div></article>
+<article class="skill"><div class="symbol">☁</div><h3>Cloud Computing</h3><p>Learning AWS services and concepts behind serverless architectures.</p><div class="tags"><span class="tag">AWS · Learning</span><span class="tag">Serverless concepts</span></div></article>
+<article class="skill"><div class="symbol">+</div><h3>Professional Skills</h3><p>Bringing a collaborative, responsible approach to learning and project work.</p><div class="tags"><span class="tag">Communication</span><span class="tag">Leadership</span><span class="tag">Teamwork</span><span class="tag">Adaptability</span></div></article>
+</div></div></section>
+<section id="projects"><div class="container"><div class="heading"><p class="eyebrow">Selected work</p><h2 class="title">Projects & exploration</h2><p class="intro">Projects and technical explorations that reflect my interest in building practical solutions.</p></div><div class="projects">
+<article class="project"><div class="project-head"><span class="num">PROJECT 01</span><span class="type">Media processing</span></div><h3>Cloud-Native Intelligent Media Processing & Workflow Orchestration</h3><p>Developed a local media-processing prototype using Python-based tools for speech-to-text, video-frame processing, scene detection, and selected-clip extraction. Also designed a proposed AWS serverless architecture for orchestration and monitoring.</p><div class="tags"><span class="tag">Python</span><span class="tag">Whisper</span><span class="tag">FFmpeg</span><span class="tag">OpenCV</span><span class="tag">PySceneDetect</span><span class="tag">AWS design</span></div><span class="project-link">Local prototype · AWS deployment not claimed</span></article>
+<article class="project"><div class="project-head"><span class="num">PROJECT 02</span><span class="type">Ongoing</span></div><h3>Energy-Efficient VM Scheduling in Cloud Computing</h3><p>Exploring approaches to improve energy efficiency through CPU-utilization monitoring, workload consolidation, virtual-machine migration, and reducing the use of underutilized hosts.</p><div class="tags"><span class="tag">Cloud computing</span><span class="tag">Virtual machines</span><span class="tag">Energy efficiency</span></div><span class="project-link">Ongoing exploration</span></article>
+<article class="project"><div class="project-head"><span class="num">PROJECT 03</span><span class="type">Python application</span></div><h3>Student Registration Form</h3><p>Created a basic student registration application using Python, practising application structure and form-based input.</p><div class="tags"><span class="tag">Python</span><span class="tag">Tkinter</span></div><a class="project-link" href="https://github.com/gbala4891-sketch/python-student-registration" target="_blank" rel="noopener noreferrer">View source code on GitHub ↗</a></article>
+<article class="project"><div class="project-head"><span class="num">PROJECT 04</span><span class="type">UI/UX design</span></div><h3>YouTube Clone UI</h3><p>Designed a YouTube-inspired interface in Figma, focusing on layout, visual hierarchy, and a familiar user experience.</p><div class="tags"><span class="tag">Figma</span><span class="tag">UI/UX</span><span class="tag">Interface design</span></div><span class="project-link">Design project</span></article>
+</div><p class="note">Project descriptions distinguish completed work from ongoing exploration and proposed architecture. Add a public repository or demo link to each project when one is available.</p></div></section>
+<section id="experience"><div class="container"><div class="heading"><p class="eyebrow">Learning through experience</p><h2 class="title">Internship & training</h2></div><div class="panel timeline">
+<article class="timeline-item"><span class="dot"></span><div><h3>Data Science Intern · Globesci Technologies</h3><p class="meta">Internship · One month</p><p>Gained practical exposure to Python tasks, exploratory data analysis, data cleaning, missing-value and outlier handling, and preprocessing. Also worked on tasks related to an Expense Tracker application.</p></div></article>
+<article class="timeline-item"><span class="dot"></span><div><h3>Cybersecurity Industrial Training</h3><p class="meta">Introductory training</p><p>Explored foundational cybersecurity concepts and introductory security topics.</p></div></article>
+<article class="timeline-item"><span class="dot"></span><div><h3>Embedded Systems Training · MSME</h3><p class="meta">One month</p><p>Completed a training programme offering exposure to embedded systems concepts.</p></div></article>
+</div></div></section>
+<section id="education"><div class="container"><div class="heading"><p class="eyebrow">Academic background</p><h2 class="title">Education & certifications</h2></div><div class="education"><article class="panel"><h3>B.Tech — Information Technology</h3><p>S.A. Engineering College, Chennai</p><p>Expected graduation: 2027</p></article><article class="panel"><h3>Additional learning</h3><p>Continuing to build technical knowledge through courses, workshops, and practical projects.</p></article></div><ul class="certs"><li>Japanese-Language Proficiency Test — JLPT N5 passed</li><li>Data Science Internship Certificate — Globesci Technologies</li><li>HDCA Course — CSC</li><li>MePro Pearson Level 7</li><li>MATLAB Certificate</li><li>Flutter Workshop on Mobile App Development</li><li>AWS Cloud Computing — currently learning</li></ul></div></section>
+<section id="strengths"><div class="container"><div class="heading"><p class="eyebrow">How I work</p><h2 class="title">Strengths & mindset</h2><p class="intro">I value being dependable, communicating clearly, taking ownership, and working towards shared goals.</p></div><div class="strengths"><span>Communication</span><span>Leadership</span><span>Team coordination</span><span>Accountability</span><span>Problem-solving</span><span>Adaptability</span><span>Continuous learning</span><span>Responsibility</span></div></div></section>
+<section id="contact"><div class="container"><div class="heading"><p class="eyebrow">Start a conversation</p><h2 class="title">Let's connect.</h2><p class="intro">I'm interested in connecting with developers, collaborating on projects, learning from others, and exploring suitable IT internship and entry-level opportunities.</p></div><div class="contact"><div class="panel"><h3 style="margin-bottom:10px">Open to learning and opportunities</h3><p>I welcome professional connections and conversations about software development, data science, and cloud computing.</p><a class="btn primary" href="mailto:gbala4891@gmail.com">Email me ↗</a></div><div class="contactlinks"><a class="contactlink" href="mailto:gbala4891@gmail.com"><span>Email</span><span>gbala4891@gmail.com ↗</span></a><a class="contactlink" href="https://github.com/gbala4891-sketch" target="_blank" rel="noopener noreferrer"><span>GitHub</span><span>View profile ↗</span></a><a class="contactlink" href="https://www.linkedin.com/in/balaganesh-d-71271a2a5/" target="_blank" rel="noopener noreferrer"><span>LinkedIn</span><span>Connect ↗</span></a><div class="contactlink"><span>Location</span><span>Poonamallee, Chennai</span></div></div></div><p class="note">Your phone number is not shown on this public portfolio to reduce unwanted calls. You can share it separately with recruiters when appropriate.</p></div></section>
+</main>
+<footer><div class="container foot"><span>© 2026 Bala Ganesh D · Personal portfolio</span><span>Designed with HTML & CSS</span></div></footer>
 </body>
 </html>
